@@ -380,7 +380,7 @@ img {
 	border: none;
 }
 
-table {
+.tableCustom {
 	align-content: left;
 	width: 500px;
 	height: 250px;
