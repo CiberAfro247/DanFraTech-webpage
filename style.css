@@ -1,3 +1,8 @@
+
+/***********************/
+/* Barra de navegación */
+/***********************/
+
 .navbar-custom {
 	background-color: #31ada1;
 }
@@ -12,15 +17,50 @@
 	border-radius: 5px;
 }
 
+/****************/
+/* Contenedores */
+/****************/
 
-.art {
-	border-color: #31ada1;
-	border-radius: 3px; /* (height/2) + border-width */
+.btn {
+		border-color: #31ada1;
+		border-radius: 3px;
   	border-style: solid;
-	border-width: 1px;
+		border-width: 1px;
   	margin-top: 5px;
   	color: #555555;
   	padding: 15px;
+}
+
+.art {
+		border-color: #31ada1;
+		border-radius: 3px; /* (height/2) + border-width */
+  	border-style: solid;
+		border-width: 1px;
+  	margin-top: 5px;
+  	color: #555555;
+  	padding: 5px 5px 5px 5px;
+  	background-color: #fff;
+}
+
+.artClub {
+		border-color: #31ada1;
+		border-radius: 3px; /* (height/2) + border-width */
+  	border-style: solid;
+		border-width: 1px;
+  	margin-top: 5px;
+  	color: #555555;
+  	padding: 5px 5px 5px 5px;
+  	background-color: #fff;
+}
+
+.art2 {
+		border-color: #31ada1;
+		border-radius: 3px; /* (height/2) + border-width */
+  	border-style: solid;
+		border-width: 1px;
+  	margin-top: 5px;
+  	color: #555555;
+  	background-color: #fff;
 }
 
 .h1-custom {
@@ -28,9 +68,13 @@
 	font-family: 'Helvetica';
 }
 
+/*********************/
+/* Barra de busqueda */
+/*********************/
+
 .flexsearch--wrapper {
 	height: auto;
-	width: auto;
+	width: 100%;
 	max-width: 100%;
 	overflow: hidden;
 	background: transparent;
@@ -46,54 +90,66 @@
 .flexsearch--input-wrapper {
 	padding: 0 66px 0 0; /* Right padding for submit button width */
 	overflow: hidden;
+
 }
 
 .flexsearch--input {
   width: 100%;
 }
 
-/***********************
- * Configurable Styles *
- ***********************/
 .flexsearch {
-  padding: 0 25px 0 200px; /* Padding for other horizontal elements */
+  padding: 0 500px 0 0; /* Padding for other horizontal elements */
+}
+
+.flexsearchEliminar {
+	width: 35%;
+}
+
+.flexsearchDesc {
+	padding: 15px 300px 0 0;
+}
+
+.flexsearchNav {
+  padding: 0 25px 5px 50px; /* Padding for other horizontal elements */
+
 }
 
 .flexsearch--input {
-  	-webkit-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
- 	height: 30px;
-  	padding: 0 46px 0 10px;
+ 	height: 25px;
+ 	padding: 0 46px 0 10px;
+ 	padding-right: none;
 	border-color: #555555;
-  	border-radius: 3px; /* (height/2) + border-width */
-  	border-style: solid;
+  border-radius: 3px; /* (height/2) + border-width */
+  border-style: solid;
 	border-width: 1px;
-  	margin-top: 5px;
-  	color: #555555;
-  	background-color: #A7C7C4;
-  	font-family: 'Helvetica', sans-serif;
+  margin-top: 5px;
+  color: #555555;
+  background-color: #A7C7C4;
+  font-family: 'Helvetica', sans-serif;
 	font-size: 16px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
 	
 .flexsearch--submit {
-  	position: absolute;
+  position: absolute;
 	right: 0;
 	top: 0;
 	display: block;
 	width: 60px;
 	height: 60px;
-  	padding: 0;
-  	border: none;
+ 	padding: 0;
+ 	border: none;
 	margin-top: 4px; /* margin-top + border-width */
-  	margin-right: 5px; /* border-width */
+ 	margin-right: 5px; /* border-width */
 	background: transparent;
-  	color: #888;
-  	font-family: 'Helvetica', sans-serif;
-  	font-size: 16px;
-  	line-height: 60px;
+ 	color: #888;
+ 	font-family: 'Helvetica', sans-serif;
+ 	font-size: 16px;
+ 	line-height: 60px;
 }
 
 .flexsearch--input:focus {
@@ -136,17 +192,206 @@ input:-moz-placeholder {
 	padding-bottom: 5px;
 }
 
+/***********/
+/* Botones */
+/***********/
+
 .button {
 	border-color: #555555;
-  	border-radius: 3px;
-  	border-style: solid;
+  border-radius: 3px;
+  border-style: solid;
 	border-width: 0;
 	color: #000000;
-  	background-color: #A7C7C4;
-  	font-family: 'Helvetica', sans-serif;
+ 	background-color: #A7C7C4;
+ 	font-family: 'Helvetica', sans-serif;
 	font-size: 16px;
 	padding-left: 10px;
 	padding-top: 5px;
 	padding-right: 10px;
 	padding-bottom: 5px;
+}
+
+.button2 {
+	border-color: #555555;
+  border-radius: 3px;
+  border-style: solid;
+	border-width: 0;
+	color: #000000;
+ 	background-color: #A7C7C4;
+ 	font-family: 'Helvetica', sans-serif;
+	font-size: 16px;
+	padding-left: 10px;
+	padding-top: 3px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+}
+
+.button:hover {
+	border-color: #555555;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 0;
+	color: #000000;
+	background-color: #6FA49F;
+	font-family: 'Helvetica', sans-serif;
+	font-size: 16px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+
+/********************/
+/* Carrousel Libros */
+/********************/
+
+#carrusel {
+    float:left;
+    width:1130px;
+    overflow:hidden;
+    height:200px;
+    position:relative;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+ 
+#carrusel .left-arrow {
+    position:absolute;
+    left:10px;
+    z-index:1;
+    top:50%;
+    margin-top:-9px;
+}
+ 
+#carrusel .right-arrow {
+    position:absolute;
+    right:10px;
+    z-index:1;
+    top:50%;
+    margin-top:-9px;
+}
+.carrusel {
+		padding: 15px 15px 15px 15px;
+    width:4000px;
+    left:0px;
+    position:absolute;
+    z-index:0;
+}
+ 
+.carrusel>div {
+    float: left;
+    height: 203px;
+    margin-right: 5px;
+    width: 120px;
+    text-align:center;
+}
+ 
+.carrusel img {
+    cursor:pointer;
+}
+ 
+.product {
+    border-color:none;
+    border-width:0;
+}
+
+/******************************/
+/* Carrousel Clubs de lectura */
+/******************************/
+
+#carruselClub {
+    float:left;
+    width:1130px;
+    overflow:hidden;
+    height:200px;
+    position:relative;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+ 
+#carruselClub .left-arrowClub {
+    position:absolute;
+    left:10px;
+    z-index:1;
+    top:50%;
+    margin-top:-9px;
+}
+ 
+#carruselClub .right-arrowClub {
+    position:absolute;
+    right:10px;
+    z-index:1;
+    top:50%;
+    margin-top:-9px;
+}
+.carruselClub {
+		padding: 15px 15px 15px 15px;
+    width:4000px;
+    left:0px;
+    position:absolute;
+    z-index:0;
+}
+ 
+.carruselClub>div {
+    float: left;
+    height: 170px;
+    margin-right: 5px;
+    width: 195px;
+    text-align:center;
+}
+ 
+.carruselClub img {
+    cursor:pointer;
+}
+ 
+.productClub {
+    border:#CCCCCC 1px solid;
+    padding: 5px;
+}
+
+/*********/
+/* Libro */
+/*********/
+
+.book {
+	height: 165px;
+}
+
+/**********/
+/* Titulo */
+/**********/
+
+.club {
+	font-family: Liberation Serif;
+	font-size: 35px;
+	border-bottom: 1px solid #31ada1;
+}
+
+.h5 {
+	padding-bottom: 1px;
+}
+
+/*************/
+/* Etiquetas */
+/*************/
+
+img {
+	padding-top: 0px;
+	border: none;
+}
+
+table {
+	align-content: left;
+	width: 500px;
+	height: 250px;
+}
+
+.p {
+	padding-bottom: 0;
+	border-bottom: 2px;
+}
+
+.a {
+	text-decoration: none;
+	color: black;
 }
