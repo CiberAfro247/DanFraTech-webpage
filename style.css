@@ -1,8 +1,3 @@
-
-/***********************/
-/* Barra de navegación */
-/***********************/
-
 .navbar-custom {
 	background-color: #31ada1;
 }
@@ -17,64 +12,27 @@
 	border-radius: 5px;
 }
 
-/****************/
-/* Contenedores */
-/****************/
 
-.btn {
-		border-color: #31ada1;
-		border-radius: 3px;
+.art {
+	border-color: #31ada1;
+	border-radius: 3px; /* (height/2) + border-width */
   	border-style: solid;
-		border-width: 1px;
+	border-width: 1px;
   	margin-top: 5px;
   	color: #555555;
   	padding: 15px;
+	column-gap: 40px;
+	max-width: 100%;
+	max-height: 100%;
 }
-
-.art {
-		border-color: #31ada1;
-		border-radius: 3px; /* (height/2) + border-width */
-  	border-style: solid;
-		border-width: 1px;
-  	margin-top: 5px;
-  	color: #555555;
-  	padding: 5px 5px 5px 5px;
-  	background-color: #fff;
-}
-
-.artClub {
-		border-color: #31ada1;
-		border-radius: 3px; /* (height/2) + border-width */
-  	border-style: solid;
-		border-width: 1px;
-  	margin-top: 5px;
-  	color: #555555;
-  	padding: 5px 5px 5px 5px;
-  	background-color: #fff;
-}
-
-.art2 {
-		border-color: #31ada1;
-		border-radius: 3px; /* (height/2) + border-width */
-  	border-style: solid;
-		border-width: 1px;
-  	margin-top: 5px;
-  	color: #555555;
-  	background-color: #fff;
-}
-
 .h1-custom {
 	font-size: 20px;
 	font-family: 'Helvetica';
 }
 
-/*********************/
-/* Barra de busqueda */
-/*********************/
-
 .flexsearch--wrapper {
 	height: auto;
-	width: 100%;
+	width: auto;
 	max-width: 100%;
 	overflow: hidden;
 	background: transparent;
@@ -90,66 +48,54 @@
 .flexsearch--input-wrapper {
 	padding: 0 66px 0 0; /* Right padding for submit button width */
 	overflow: hidden;
-
 }
 
 .flexsearch--input {
   width: 100%;
 }
 
+/***********************
+ * Configurable Styles *
+ ***********************/
 .flexsearch {
-  padding: 0 500px 0 0; /* Padding for other horizontal elements */
-}
-
-.flexsearchEliminar {
-	width: 35%;
-}
-
-.flexsearchDesc {
-	padding: 15px 300px 0 0;
-}
-
-.flexsearchNav {
-  padding: 0 25px 5px 50px; /* Padding for other horizontal elements */
-
+  padding: 0 25px 0 200px; /* Padding for other horizontal elements */
 }
 
 .flexsearch--input {
-  -webkit-box-sizing: content-box;
+  	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
- 	height: 25px;
- 	padding: 0 46px 0 10px;
- 	padding-right: none;
+ 	height: 30px;
+  	padding: 0 46px 0 10px;
 	border-color: #555555;
-  border-radius: 3px; /* (height/2) + border-width */
-  border-style: solid;
+  	border-radius: 3px; /* (height/2) + border-width */
+  	border-style: solid;
 	border-width: 1px;
-  margin-top: 5px;
-  color: #555555;
-  background-color: #A7C7C4;
-  font-family: 'Helvetica', sans-serif;
+  	margin-top: 5px;
+  	color: #555555;
+  	background-color: #A7C7C4;
+  	font-family: 'Helvetica', sans-serif;
 	font-size: 16px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
 	
 .flexsearch--submit {
-  position: absolute;
+  	position: absolute;
 	right: 0;
 	top: 0;
 	display: block;
 	width: 60px;
 	height: 60px;
- 	padding: 0;
- 	border: none;
+  	padding: 0;
+  	border: none;
 	margin-top: 4px; /* margin-top + border-width */
- 	margin-right: 5px; /* border-width */
+  	margin-right: 5px; /* border-width */
 	background: transparent;
- 	color: #888;
- 	font-family: 'Helvetica', sans-serif;
- 	font-size: 16px;
- 	line-height: 60px;
+  	color: #888;
+  	font-family: 'Helvetica', sans-serif;
+  	font-size: 16px;
+  	line-height: 60px;
 }
 
 .flexsearch--input:focus {
@@ -192,206 +138,169 @@ input:-moz-placeholder {
 	padding-bottom: 5px;
 }
 
-/***********/
-/* Botones */
-/***********/
-
 .button {
-	border-color: #555555;
-  border-radius: 3px;
-  border-style: solid;
-	border-width: 0;
+	border-color: #A7C7C4;
+  	border-radius: 3px;
+  	border-style: solid;
+	border-width: 1;
 	color: #000000;
- 	background-color: #A7C7C4;
- 	font-family: 'Helvetica', sans-serif;
+  	background-color: #ffffff;
+  	font-family: 'Helvetica', sans-serif;
 	font-size: 16px;
 	padding-left: 10px;
 	padding-top: 5px;
 	padding-right: 10px;
 	padding-bottom: 5px;
-}
-
-.button2 {
-	border-color: #555555;
-  border-radius: 3px;
-  border-style: solid;
-	border-width: 0;
-	color: #000000;
- 	background-color: #A7C7C4;
- 	font-family: 'Helvetica', sans-serif;
-	font-size: 16px;
-	padding-left: 10px;
-	padding-top: 3px;
-	padding-right: 10px;
-	padding-bottom: 3px;
-}
-
-.button:hover {
-	border-color: #555555;
-	border-radius: 3px;
-	border-style: solid;
-	border-width: 0;
-	color: #000000;
-	background-color: #6FA49F;
-	font-family: 'Helvetica', sans-serif;
-	font-size: 16px;
-	padding-left: 10px;
-	padding-top: 5px;
-	padding-right: 10px;
-	padding-bottom: 5px;
-}
-
-/********************/
-/* Carrousel Libros */
-/********************/
-
-#carrusel {
-    float:left;
-    width:1130px;
-    overflow:hidden;
-    height:200px;
-    position:relative;
-    margin-top:20px;
-    margin-bottom:10px;
-}
- 
-#carrusel .left-arrow {
-    position:absolute;
-    left:10px;
-    z-index:1;
-    top:50%;
-    margin-top:-9px;
-}
- 
-#carrusel .right-arrow {
-    position:absolute;
-    right:10px;
-    z-index:1;
-    top:50%;
-    margin-top:-9px;
-}
-.carrusel {
-		padding: 15px 15px 15px 15px;
-    width:4000px;
-    left:0px;
-    position:absolute;
-    z-index:0;
-}
- 
-.carrusel>div {
-    float: left;
-    height: 203px;
-    margin-right: 5px;
-    width: 120px;
-    text-align:center;
-}
- 
-.carrusel img {
-    cursor:pointer;
-}
- 
-.product {
-    border-color:none;
-    border-width:0;
-}
-
-/******************************/
-/* Carrousel Clubs de lectura */
-/******************************/
-
-#carruselClub {
-    float:left;
-    width:1130px;
-    overflow:hidden;
-    height:200px;
-    position:relative;
-    margin-top:20px;
-    margin-bottom:10px;
-}
- 
-#carruselClub .left-arrowClub {
-    position:absolute;
-    left:10px;
-    z-index:1;
-    top:50%;
-    margin-top:-9px;
-}
- 
-#carruselClub .right-arrowClub {
-    position:absolute;
-    right:10px;
-    z-index:1;
-    top:50%;
-    margin-top:-9px;
-}
-.carruselClub {
-		padding: 15px 15px 15px 15px;
-    width:4000px;
-    left:0px;
-    position:absolute;
-    z-index:0;
-}
- 
-.carruselClub>div {
-    float: left;
-    height: 170px;
-    margin-right: 5px;
-    width: 195px;
-    text-align:center;
-}
- 
-.carruselClub img {
-    cursor:pointer;
-}
- 
-.productClub {
-    border:#CCCCCC 1px solid;
-    padding: 5px;
-}
-
-/*********/
-/* Libro */
-/*********/
-
-.book {
-	height: 165px;
-}
-
-/**********/
-/* Titulo */
-/**********/
-
-.club {
-	font-family: Liberation Serif;
-	font-size: 35px;
-	border-bottom: 1px solid #31ada1;
-}
-
-.h5 {
-	padding-bottom: 1px;
-}
-
-/*************/
-/* Etiquetas */
-/*************/
-
-img {
-	padding-top: 0px;
-	border: none;
-}
-
-.tableCustom {
-	align-content: left;
-	width: 500px;
-	height: 250px;
-}
-
-.p {
-	padding-bottom: 0;
-	border-bottom: 2px;
-}
-
-.a {
+	text-align: left;
 	text-decoration: none;
-	color: black;
+
+	transition-duration: 0.4s;
+	cursor: pointer;
 }
+/*Agregado por Gonzalo Echague*/
+/*Estilo para el Avatar*/
+#image_drop_area{
+	display: flex;
+	width: 500px;
+	height: 800px;
+	border: 1px solid black;
+	background-position: center;
+	background-size: cover; 
+	box-sizing: border-box;
+  }
+  /**/
+ .searchlibros{
+	column-gap: 10px;
+
+ }
+ /*Botono para la parte de busuqeda libros*/
+ .button_books{
+	background-color: #ffffff;
+	border: 2px solid #31ada1;
+	color: #000000;
+
+ }
+ /*hover del boton*/
+ .button_books:hover {
+	background-color: #31ada1;
+	color: #ffffff;
+	text-decoration: none;
+ }
+ .checked {
+	color: orange;
+  }
+  /*Pdf Viewer*/
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+	color: #eee;
+}
+
+.buttonpdf{
+	cursor: pointer;
+	padding: 2px 5px;
+	color: #ccc;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	background-color: #171717;
+}
+
+main{
+	width: 100%;
+	min-height: 90vh;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	
+}
+
+main h3{
+	text-align: center;
+	width: 100%;
+	word-spacing: 0.5rem;
+	font-size: 2rem;
+	color: #bbbbbb;
+}
+
+.pdf-viewer{
+	background-color: #333;
+	background-color: #fff;
+	margin: auto;
+}
+
+.hidden{
+	display:none;
+}
+
+footer{
+	position:sticky;
+	bottom:0;
+	height: 10vh;
+	background-color:#000000;
+}
+
+.pagination{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: #eee;
+	font-size: 1.4rem;
+}
+
+.pagination span{
+	font-size: 1.1rem;
+	margin: 0 10px;
+}
+
+.pagination button{
+	font-size: 1.5rem;
+}
+
+button:active > *{
+	color: #8d8d8d;
+}
+
+footer ul{
+	list-style-type: none;
+	width: 100%;
+	height: 100%;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	position: relative;
+}
+
+footer ul li:first-child{
+	margin-left: 20px;
+}
+
+footer ul li:last-child{
+	margin-right: 20px;
+}
+
+#zoomValue{
+	display:inline-block;
+	font-size: 0.9rem;
+	width: 60px;
+	vertical-align:center;
+}
+
+#openPDF{
+	font-size: 1.2rem;
+	padding: 2px 5px;
+	font-weight: 700;
+	color:#eee;
+}
+
+
