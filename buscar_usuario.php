@@ -1,10 +1,8 @@
-<?php 
-	$servidor = "localhost";
-	$usuario = "root";
-	$password = "";
-	$base_datos = "proyecto";
-	$usuario = $_POST['user'];
-	$conexion = mysqli_connect("localhost", "root", "", "proyecto");
+<?php
+	
+	require 'database.php';
+
+	$conexion = mysqli_connect($servidor,$usuario, $password, $base_datos);
 
 	$query_user = "SELECT * FROM usuarios WHERE nombre = '$usuario'";
 
