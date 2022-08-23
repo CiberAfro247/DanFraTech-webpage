@@ -94,7 +94,7 @@
   	</nav>
   	<br>
 	<div class = "container">
-		<form method="post">
+		<form method="post" action="libros_eliminar.php">
 			<div class="row">
 				<div class="col-md-12"> <h2>Eliminar Libros</h2></div>
 			</div>
@@ -102,11 +102,9 @@
                 <div class="col-5">
                     <div class="flexsearchClubs">
                         <div class="flexsearch--wrapper">
-                            <form class="flexsearch--form" action="#" method="post">
-                                <div class="flexsearch--input-wrapper">
-                                    <input class="flexsearch--input" type="search" placeholder="Buscar Libro  ">
-                                </div>
-                            </form>
+                            <div class="flexsearch--input-wrapper">
+                                <input class="flexsearch--input" id="book" name="book" type="text" placeholder="Buscar Libro  ">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -134,16 +132,11 @@
                 </div>
                 <div class="row">
                     <div class="col-12" align="right">
-                        <input type="submit" style="background-color: #FF7777;" onclick="eliminar()" id="eliminar" class="button" value="Eliminar">
+                        <input type="submit" style="background-color: #FF7777;" id="eliminar" class="button" value="Eliminar">
                     </div>
                 </div>
             </div>
         </form>
     </div>
 </body>
-<script type="text/javascript">
-	function eliminar(){
-		confirm('Desea eliminar el Libro?');
-	}
-</script> 
 </html>
