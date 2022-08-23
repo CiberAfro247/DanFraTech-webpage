@@ -81,7 +81,7 @@
 									<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 										<li><a class="dropdown-item" href="">Perfil</a></li>
 										<div class="dropdown-divider"></div>
-								  		<li><a class="dropdown-item" href="Inicio_sin_usuario.html">Cerrar sesión</a></li>
+								  		<li><a class="dropdown-item" href="Index.html">Cerrar sesión</a></li>
 									</ul>
 								</li>
 			        		</ul>
@@ -93,61 +93,63 @@
   	</nav>
   	<br>
 	<div class = "container">
-		<form method="post">
+		
 			<div class="row">
 				<div class="col-md-12"> <h2>Ingresar Libros</h2></div>
 			</div>
 			<div class="row">
 				<div class="col-md-9">
+					<form action="libros_ingresar.php" method="POST">
 					<table>
 						<tr>
 							<td>Titulo</td>
-							<td><input type="text" id="titulo"></td>
+							<td><input type="text" id="titulo" name="titulo"></td>
 						</tr>
 						<tr>
 							<td>ISBN</td>
-							<td><input type="text" id="isbn"></td>
+							<td><input type="text" id="isbn" name="isbn"></td>
 						</tr>
 						<tr>
 							<td>Autor</td>
-							<td><input type="text" id="autor"></td>
+							<td><input type="text" id="autor" name="autor"></td>
 						</tr>
 						<tr>
 							<td>Formatos Disponibles</td>
-							<td><input type="checkbox" id="fisico"> Fisico <input type="checkbox" id="digital"> Digital</td>
+							<td><input type="checkbox" id="fisico" name="fisico"> Fisico <input type="checkbox" id="digital" name="digital"> Digital</td>
 						</tr>
 						<tr>
 							<td>Genero</td>
-							<td><input type="text" id="genero"></td>
+							<td><input type="text" id="genero" name="genero"></td>
 						</tr>
 						<tr>
 							<td>Fecha Publicacion</td>
-							<td><input type="date" id="fechaPublicacion"></td>
+							<td><input type="date" id="fechaPublicacion" name="fechaPublicacion"></td>
 						</tr>
 						<tr>
-							<td>Cantidad Prestamos</td>
-							<td><input type="text" id="cntPrestamos"></td>
+							<td>Idioma</td>
+							<td><input type="text" id="idioma" name="idioma"></td>
 						</tr>
 						<tr>
 							<td>Ingresar Archivo</td>
-							<td><input type="file" id="archivo" class="form__file" required></td>
+							<td><input type="file" id="archivo" name="archivo" class="form__file" required></td>
 						</tr>
 						<tr>
 							<td>Imagen</td>
-							<td><input type="file" id="caratula"></td>
+							<td><input type="file" id="caratula" name="caratula"></td>
 						</tr>
 						<tr>
 							<td>Sinopsis</td>
-							<td><textarea id="sinopsis" rows="10" cols="50">Ingrese la Sinopsis</textarea></td>
+							<td><textarea id="sinopsis" name="sinopsis" rows="10" cols="50" placeholder="Ingrese la Sinopsis"></textarea></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td align="right"><input type="submit" id="crear" class="button" value="Crear"></td>
 						</tr>
 					</table>
+					</form>
 				</div>
 			</div>
-		</form>
+		
 	</div>
 	<br>
 </body>
