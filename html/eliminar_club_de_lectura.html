@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="../Imagenes/Bookneith.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" type="text/css" href="../css/style.css">
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  	<script src="https://kit.fontawesome.com/4c9b3a5a5f.js" crossorigin="anonymous"></script>
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap-avatar@latest/dist/avatar.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<script
+				src="https://code.jquery.com/jquery-3.6.0.js"
+				integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous"></script>
+
+	<title>Manejo de Clubes de Lectura</title>
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-expand-lg navbar-light">
+    	<div class="container">
+      		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+      			<div class="container">
+      				<div class="row">
+      					<div class="col-11">
+      						<ul class="navbar-nav">
+
+			          			<li class="nav-item">
+			            			<a class="nav-link a-custom" href="Inicio_administrador.html">Inicio</a>
+			          			</li>
+
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Libros
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+										<li><a class="dropdown-item" href="libros_administrador.html">Pagina Principal</a></li>	
+									  	<li><a class="dropdown-item" href="libros_ingresar.html">Ingresar</a></li>
+										<li><a class="dropdown-item" href="libros_eliminar.html">Eliminar</a></li>
+									  	<li><a class="dropdown-item" href="libros_modificar.html">Modificar</a></li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Clubes de Lectura
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+										<li><a class="dropdown-item" href="clubs_de_lectura_administrador.html">Pagina Principal</a></li>
+										<li><a class="dropdown-item" href="crear_club_de_lectura.html">Crear</a></li>
+									  	<li><a class="dropdown-item" href="eliminar_club_de_lectura.html">Eliminar</a></li>
+									  	<li><a class="dropdown-item" href="modificar_club_de_lectura.html">Modificar</a></li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Usuarios
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									  	<li><a class="dropdown-item " href="eliminar_usuario.html">Eliminar</a></li>
+									  	<li><a class="dropdown-item " href="modificar_usuario.html">Modificar</a></li>
+									</ul>
+								</li>
+							
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Autores
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                       						<li><a class="dropdown-item" href="ingresar_autores.html">Ingresar</a></li>
+									  	<li><a class="dropdown-item " href="eliminar_autores.html">Eliminar</a></li>
+									  	<li><a class="dropdown-item " href="modificar_autores.html">Modificar</a></li>
+									</ul>
+								</li>	
+							
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Multas
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									  	<li><a class="dropdown-item " href="ingresar_multas.html">Ingresar</a></li>
+									  	<li><a class="dropdown-item " href="baja_mod_multas.html">Modificar y Eliminar</a></li>
+									</ul>
+								</li>
+						
+								<li class="nav-item">
+			            			<a class="nav-link a-custom" href="resenias_administrador.html">Reseñar</a>
+			          			</li>
+								<li>
+			          				<div class="flexsearchNav" align="center">
+										<div class="flexsearch--wrapper">
+											<form class="flexsearch--form" action="../php/busqueda_libro_administrador.php" method="post">
+												<div class="flexsearch--input-wrapper">
+													<input id="buscar" name="buscar" class="flexsearch--input" type="search" placeholder="Buscar libros">
+													<input type="submit" name="submit" class="button">
+												</div>
+											</form>
+										</div>
+									</div>
+			          			</li>
+			        		</ul>
+      					</div>				<div class="col-1">
+      						<ul class="navbar-nav">
+			      				<li align="right" class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<i class="fa-solid fa-user fa-lg"></i>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+										<li><a class="dropdown-item" href="">Perfil</a></li>
+										<div class="dropdown-divider"></div>
+								  		<li><a class="dropdown-item" href="Inicio_sin_usuario.html">Cerrar sesión</a></li>
+									</ul>
+								</li>
+			        		</ul>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+    	</div>
+  	</nav>
+  	<br>
+  	<div class="container">
+	  		<div class="row">
+	  			<div class="col-12"><h3>Manejo de Clubs de Lectura</h3></div>
+	  		</div>
+	  		<div class="row">
+		  		<div class="col-12">
+		  			<div class="container-fluid">
+		  				<div class="row">
+		  					<div class="col-4">
+		  						<div class="flexsearchEliminar">
+
+									<div class="flexsearch--wrapper">
+										<form class="flexsearch--form" action="eliminar_club.php" method="post">
+											<div class="flexsearch--input-wrapper">
+												<input class="flexsearch--input" id="club" name="club" type="search" placeholder="Buscar club de lectura">
+											</div>
+										</form>
+									</div>
+								</div>
+		  					</div>
+		  					<div class="col-2"><input type="submit" class="button" name="boton" value="Buscar"></div>
+		  				</div>
+		  				<br>
+		  				<div class="row">
+		  				</div>
+		  			</div>
+		  		</div>		
+		  	</div>
+		  	<br>
+			  <div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-body">
+							<h2 class="card-title text-uppercase mb-0">Manejo de Clubs</h2>
+						</div>
+						<br>
+						<div class="table-responsive">
+							<table id="tabla_Clubes">
+								<thead>
+									<tr>
+										<th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
+										<th scope="col">Nombre</th>
+										<th scope="col">Fecha de Creacion</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+  	</div>
+					<!-- MODAL DE MODIFCACIONES -->
+					<div id="modifModal" class="modal" tabindex="-1">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								 <div class="modal-header">
+									 <h5 class="modal-title">Modificar Club</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="cerrarModal()">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<input type="hidden" id="txtID">
+									<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1">Nombre</span>
+											</div>
+											<input type="text" id="txtNombre" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+									</div>									
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cerrarModal()">Cerrar</button>
+									<div id="btnGuardarCont"></div>
+									<button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+		</body>			
+	<script type="text/javascript" src="js/manejoClub.js"></script>
+</html>
