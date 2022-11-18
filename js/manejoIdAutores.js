@@ -1,7 +1,7 @@
 
 datoAutores = []; //Array global para manejo de usuarios	
 async function traerAutores() {
-	const response = await fetch('php/traerAutores.php',
+	const response = await fetch('../php/traerAutores.php',
 	{
 	method: 'GET',
 	});
