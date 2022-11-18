@@ -197,7 +197,7 @@ $Tres = $res[0];
                 </div>
             </div>
             <div class="col-md-3">             
-            	<input type="submit"  onclick="Prestamo()" id="prestamo" class="button button_books" value="Pedir Prestamo">
+            	<a href="../html/leer_administrador.html" id="prestamo" class="button button_books" value="Pedir Prestamo">Pedir Prestamo</a>
             </div>
         </div>
         <hr style="color: #31ada1; border:1px;">
