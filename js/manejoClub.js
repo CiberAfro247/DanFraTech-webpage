@@ -1,7 +1,7 @@
 datosClubes = [];
 
 async function traerClubes(){
-	const response = await fetch('php/traerClubes.php',
+	const response = await fetch('../php/traerClubes.php',
 	{
 	method: 'GET',
 	});
@@ -50,7 +50,7 @@ $("#tabla_Clubes").append(opcion);
 function eliminar(pos){
 	console.log(pos);
 	$.ajax({
-		url: 'php/eliminar_Clubes.php',
+		url: '../php/eliminar_Clubes.php',
 		method : 'POST',
 		data : {
 			dato : datosClubes[pos].ID_Club
