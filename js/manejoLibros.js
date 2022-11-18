@@ -1,7 +1,7 @@
 datosLibros = [];
 
 async function traerLibros(){
-	const response = await fetch('php/traerLibros.php',
+	const response = await fetch('../php/traerLibros.php',
 	{
 	method: 'GET',
 	});
@@ -54,7 +54,7 @@ $("#tabla_Libros").append(opcion);
 function eliminar(pos){
 	console.log(pos);
 	$.ajax({
-		url: 'php/eliminar_Libro.php',
+		url: '../php/eliminar_Libro.php',
 		method : 'POST',
 		data : {
 			dato : datosLibros[pos].ISBN
@@ -73,7 +73,7 @@ Modificacion del Autor
 function guardarCambios(pos){
 	console.log(pos);
 	$.ajax({
-			url: 'php/modificar_Libro.php',
+			url: '../php/modificar_Libro.php',
 			method : 'POST',
 			data : {
 				genero : $('#txtGenero').val(),
