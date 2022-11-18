@@ -9,13 +9,12 @@ try {
 } catch (PDOException $e) {
   die('Connection Failed: ' . $e->getMessage());
 }
-$id = $_POST['dato'];
+$id_club = $_POST['dato'];
+$nom = $_POST['nombre'];
 
-$day = $_POST['cnt'];
+$query_modificar = " UPDATE club_de_lectura SET Nombre = '$nom' WHERE ID_Club ='".$id_club."'";
+$stmt = $conn->prepare($query_modificar);
+echo($query_modificar);
+$stmt->execute();
 
-$consulta = "UPDATE multas SET cant_dias = '$day' WHERE ID_Multas = $id";
-$resultado = $conn->query($consulta);
-echo($consulta);
-
-$resultado->execute();
 ?>

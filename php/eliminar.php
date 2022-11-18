@@ -1,16 +1,17 @@
 <?php
-
-include 'database.php';
+$server = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'proyecto';
 
 try {
-    $conn = mysqli_connect($servidor,$usuario,$password,$base_datos);
-} catch (Exception $ex) {
-    die($ex->getMessage());
+  $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
+} catch (PDOException $e) {
+  die('Connection Failed: ' . $e->getMessage());
 }
-
 $id = $_POST['dato'];
-
-$consulta = "DELETE FROM usuariosPlataforma WHERE id =".$id."";
-$resultado = mysqli_query($conn , $consulta);
-
+$query_eliminar2 = "DELETE FROM reciben WHERE ID_Multas =".$id."";
+//$query_eliminar = "DELETE FROM multas WHERE ID_Multas =".$id."";
+$stmt = $conn->prepare($query_eliminar2);
+$stmt->execute();
 ?>

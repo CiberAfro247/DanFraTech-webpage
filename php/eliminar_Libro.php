@@ -11,11 +11,12 @@ try {
   die('Connection Failed: ' . $e->getMessage());
 }
 
-
 $isbn = $_POST['dato'];
 		
+
 $query_eliminar = "DELETE FROM libros WHERE ISBN =".$isbn."";
-echo($query_eliminar);
 $stmt = $conn->prepare($query_eliminar);
+echo($query_eliminar);
+echo($isbn);
 $stmt->execute();
 ?>

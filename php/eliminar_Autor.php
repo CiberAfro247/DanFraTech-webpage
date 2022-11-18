@@ -1,4 +1,5 @@
 <?php
+
 $server = 'localhost';
 $username = 'root';
 $password = '';
@@ -9,13 +10,13 @@ try {
 } catch (PDOException $e) {
   die('Connection Failed: ' . $e->getMessage());
 }
-$id = $_POST['dato'];
 
-$day = $_POST['cnt'];
 
-$consulta = "UPDATE multas SET cant_dias = '$day' WHERE ID_Multas = $id";
-$resultado = $conn->query($consulta);
+$id_autor = $_POST['dato'];
+
+
+$consulta = "DELETE FROM autores WHERE ID_Autor =".$id_autor."";
 echo($consulta);
-
-$resultado->execute();
+$stmt = $conn->prepare($consulta);
+$stmt->execute();
 ?>
