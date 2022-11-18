@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="icon" href="../Imagenes/Bookneith.png">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-avatar@latest/dist/avatar.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/4c9b3a5a5f.js" crossorigin="anonymous"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script
+				src="https://code.jquery.com/jquery-3.6.0.js"
+				integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous"></script>
+
 	<title>Modificar Libros</title>
 </head>
 <body><nav class="navbar navbar-custom navbar-expand-lg navbar-light">
@@ -32,8 +35,7 @@
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 										<li><a class="dropdown-item" href="libros_administrador.html">Pagina Principal</a></li>	
 									  	<li><a class="dropdown-item" href="libros_ingresar.html">Ingresar</a></li>
-										<li><a class="dropdown-item" href="libros_eliminar.html">Eliminar</a></li>
-									  	<li><a class="dropdown-item" href="libros_modificar.html">Modificar</a></li>
+									  	<li><a class="dropdown-item" href="libros_modificar.html">Manejo Libros</a></li>
 									</ul>
 								</li>
 								<li class="nav-item dropdown">
@@ -59,35 +61,33 @@
 							
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										Autores
-									</a>
-									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                       						<li><a class="dropdown-item" href="ingresar_autores.html">Ingresar</a></li>
-									  	<li><a class="dropdown-item " href="eliminar_autores.html">Eliminar</a></li>
-									  	<li><a class="dropdown-item " href="modificar_autores.html">Modificar</a></li>
-									</ul>
-								</li>	
-							
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 										Multas
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 									  	<li><a class="dropdown-item " href="ingresar_multas.html">Ingresar</a></li>
 									  	<li><a class="dropdown-item " href="baja_mod_multas.html">Modificar y Eliminar</a></li>
 									</ul>
-								</li>
+								</li>	
+							
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Autores
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									  	<li><a class="dropdown-item " href="ingresar_autores.html">Ingresar</a></li>
+										<li><a class="dropdown-item " href="eliminar_autores.html">Manejo Autores</a></li>
+									</ul>
+								</li>	
 						
 								<li class="nav-item">
 			            			<a class="nav-link a-custom" href="resenias_administrador.html">Reseñar</a>
 			          			</li>
 								<li>
-			          				<div class="flexsearchNav" align="center">
+			          				<div class="flexsearchNav" allign="center">
 										<div class="flexsearch--wrapper">
-											<form class="flexsearch--form" action="php/busqueda_libro_administrador.php" method="post">
+											<form class="flexsearch--form" action="#" method="post">
 												<div class="flexsearch--input-wrapper">
-													<input id="buscar" name="buscar" class="flexsearch--input" type="search" placeholder="Buscar libros">
-													<input type="submit" name="submit" class="button">
+													<input class="flexsearch--input" type="search" placeholder="Buscar libros">
 												</div>
 											</form>
 										</div>
@@ -115,84 +115,71 @@
     	</div>
   	</nav>
   	<br>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12"><h3>Modificar Libros </h3></div>
-        </div>
-        <div class="row">
-        	<div class="col-4">
-                <div class="flexsearchClubs">
-                    <div class="flexsearch--wrapper">
-                        <form class="flexsearch--form" action="#" method="post">
-                            <div class="flexsearch--input-wrapper">
-                                <input class="flexsearch--input" type="search" placeholder="Buscar Libros">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-        	</div>
-        </div>
-        <br>
-		<form>
-        	<div class="row">
-				<div class="col-4">
-					<div class="image_drop_area">
-						<img src="" id="caratula"alt="Caratula"/>
+    <br>
+		<div class = "container">
+			<br>
+			   <div class="row">
+				   <div class="col-md-12">
+					   <div class="card">
+						   <div class="card-body">
+							   <h2 class="card-title text-uppercase mb-0">Manejo de Libros</h2>
+						   </div>
+						   <br>
+						   <div class="table-responsive">
+							   <table id="tabla_Libros">
+								   <thead>
+									   <tr>
+										   <th scope="col" class="border-0 text-uppercase font-medium pl-4">ISBN</th>
+										   <th scope="col">Titulo</th>
+										   <th scope="col">Genero</th>
+										   <th scope="col">Sinopsis</th>
+										   <th scope="col">Tipo</th>
+										   <th scope="col">Fecha Publicacion</th>
+										   <th scope="col">Idioma</th>
+									   </tr>
+								   </thead>
+							   </table>
+						   </div>
+					   </div>
+				   </div>
+			   </div>
+	   </div>
+				<!-- MODAL DE MODIFCACIONES -->
+				<div id="modifModal" class="modal" tabindex="-1">
+					<div class="modal-dialog">
+						<div class="modal-content">
+ 							<div class="modal-header">
+ 								<h5 class="modal-title">Modificar Libro</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="cerrarModal()">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<input type="hidden" id="txtID">
+
+								<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">Genero</span>
+										</div>
+										<input type="text" id="txtGenero" class="form-control" placeholder="Genero" aria-label="Genero" aria-describedby="basic-addon1">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="basic-addon3">Idioma</span>
+									</div>
+									<input type="text" id="txtIdioma" class="form-control" placeholder="Idioma" aria-label="Idioma" aria-describedby="basic-addon2">
+								</div>
+								
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cerrarModal()">Cerrar</button>
+								<div id="btnGuardarCont"></div>
+								<button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+							</div>
+						</div>
 					</div>
-			  		<input type="file" id="uploader">
 				</div>
-			 	<div class="col-5 art">
-					<table>
-						<tr>
-							<td>Titulo</td>
-							<td><input type="text" id="titulo"></td>
-						</tr>
-						<tr>
-							<td>ISBN</td>
-							<td><input type="text" id="isbn"></td>
-						</tr>
-						<tr>
-							<td>Autor</td>
-							<td><input type="text" id="autor"></td>
-						</tr>
-						<tr>
-							<td>Formatos Disponibles</td>
-							<td><input type="checkbox" id="fisico"> Fisico <input type="checkbox" id="digital"> Digital</td>
-						</tr>
-						<tr>
-							<td>Genero</td>
-							<td><input type="text" id="genero"></td>
-						</tr>
-						<tr>
-							<td>Fecha Publicacion</td>
-							<td><input type="date" id="fechaPublicacion"></td>
-						</tr>
-						<tr>
-							<td>Cantidad Prestamos</td>
-							<td><input type="text" id="cntPrestamos"></td>
-						</tr>
-						<tr>
-							<td>Ingresar Archivo</td>
-							<td><input type="file" id="archivo" class="form__file" required></td>
-						</tr>
-						<tr>
-							<td>Sinopsis</td>
-						</tr>
-						<tr>
-							<td colspan="2"><textarea id="sinopsis" rows="10" cols="58" placeholder="Ingrese la Sinopsis"></textarea></td>
-						</tr>
-					</table>
-            	</div>
-        	</div>
-    		<br>
-    		<div class="row">
-        		<div class="col-9" align="right">
-           			 <input type="submit" id="cambios" class="button" value="Guardar cambios">
-        		</div>
-    		</div>
-    		<br>
-    	</form>
-    </div>
 </body>			
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>	
+<script type="text/javascript" src="js/manejoLibros.js"></script>
 </html>
