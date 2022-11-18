@@ -7,7 +7,7 @@ datosMultas = []; //Array global para manejo de usuarios
 	* 
 	*/
 async function traerUsuarios() {
-	const response = await fetch('php/traerMultas.php',
+	const response = await fetch('../php/traerMultas.php',
 	{
 	method: 'GET',
 	});
@@ -60,7 +60,7 @@ function filaNueva(infoMultas, pos){
 */
 function eliminar(pos){
 	$.ajax({
-			url: 'php/eliminar.php',
+			url: '../php/eliminar.php',
 			method : 'POST',
 			data : {
 				dato : datosMultas[pos].ID_Multas
@@ -82,7 +82,7 @@ function eliminar(pos){
  */
 function guardarCambios(pos){
 	$.ajax({
-			url: 'php/modificar.php',
+			url: '../php/modificar.php',
 			method : 'POST',
 			data : {
 				dato : datosMultas[pos].ID_Multas,
