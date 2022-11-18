@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +14,11 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/4c9b3a5a5f.js" crossorigin="anonymous"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <title>Ingresar Multas</title>
+	<script
+				src="https://code.jquery.com/jquery-3.6.0.js"
+				integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous"></script>
+            <title>Ingresar Multas</title>
 </head>
 
 <body>
@@ -133,8 +135,7 @@
             </div>
         </div>
     </nav>
-    <br>
-    <br>
+  
     <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -162,11 +163,14 @@
                                 <h2 class="card-title text-uppercase mb-0">Multas</h2>
                             </div>
                             <div class="table-responsive">
-                                <table id="tablaPersonas" class="table no-wrap user-table mb-0">
+                                <table id="tablaMultas" class="table no-wrap user-table mb-0">
                                     <thead>
                                         <tr>
                                             <th scope="col" class="border-0 text-uppercase font-medium pl-4">ID_Multas</th>
+                                            <th scope="col" class="border-0 text-uppercase font-medium">Fecha</th>
+                                            <th scope="col" class="border-0 text-uppercase font-medium">Cantidad Dias</th>
                                             <th scope="col" class="border-0 text-uppercase font-medium">ID_Usuario</th>
+
                                         </tr>
                                     </thead>                                    
                                 </table>
@@ -192,7 +196,7 @@
                         <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Cantidad de Dias</span>
                       </div>
-                      <input type="text" id="cntDias" class="form-control" placeholder="CntDias" aria-label="CntDias" aria-describedby="basic-addon1">
+                      <input type="text" id="txtCntDia" class="form-control" placeholder="CntDias" aria-label="CntDias" aria-describedby="basic-addon1">
                     </div>
             
           </div>
@@ -206,5 +210,6 @@
     </div>
     </div>
 </body>
-<script type="text/javascript" src="js/manejoUsuarios.js"></script>
+<script type="text/javascript" src="js/manejoMultas.js"></script>
+
 </html>

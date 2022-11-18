@@ -3,15 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   	<link rel="stylesheet" type="text/css" href="css/style.css">
-  	<script src="js/bootstrap.min.js"></script>
   	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   	<script src="https://kit.fontawesome.com/4c9b3a5a5f.js" crossorigin="anonymous"></script>
   	<link href="https://cdn.jsdelivr.net/npm/bootstrap-avatar@latest/dist/avatar.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-	<title>Eliminar Club de Lectura</title>
+	<script
+				src="https://code.jquery.com/jquery-3.6.0.js"
+				integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous"></script>
+
+	<title>Manejo de Clubes de Lectura</title>
 </head>
 <body>
 	<nav class="navbar navbar-custom navbar-expand-lg navbar-light">
@@ -33,8 +36,7 @@
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 										<li><a class="dropdown-item" href="libros_administrador.html">Pagina Principal</a></li>	
 									  	<li><a class="dropdown-item" href="libros_ingresar.html">Ingresar</a></li>
-										<li><a class="dropdown-item" href="libros_eliminar.html">Eliminar</a></li>
-									  	<li><a class="dropdown-item" href="libros_modificar.html">Modificar</a></li>
+										<li><a class="dropdown-item" href="libros_modificar.html">Manejo de Libros</a></li>
 									</ul>
 								</li>
 								<li class="nav-item dropdown">
@@ -70,12 +72,11 @@
 							
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										Multas
+										Autores
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 									  	<li><a class="dropdown-item " href="ingresar_autores.html">Ingresar</a></li>
 									  	<li><a class="dropdown-item " href="modificar_autores.html">Modificar</a></li>
-										<li><a class="dropdown-item " href="eliminar_autores.html">Eliminar</a></li>
 									</ul>
 								</li>	
 						
@@ -116,9 +117,8 @@
   	</nav>
   	<br>
   	<div class="container">
-  		<form method="post" action="eliminar_club_lectura.php">
 	  		<div class="row">
-	  			<div class="col-12"><h3>Eliminar Club de lectura</h3></div>
+	  			<div class="col-12"><h3>Manejo de Clubs de Lectura</h3></div>
 	  		</div>
 	  		<div class="row">
 		  		<div class="col-12">
@@ -126,6 +126,7 @@
 		  				<div class="row">
 		  					<div class="col-4">
 		  						<div class="flexsearchEliminar">
+
 									<div class="flexsearch--wrapper">
 										<form class="flexsearch--form" action="eliminar_club.php" method="post">
 											<div class="flexsearch--input-wrapper">
@@ -139,54 +140,60 @@
 		  				</div>
 		  				<br>
 		  				<div class="row">
-		  					<div class="col-2">
-					  			<p>Nombre</p>
-					  			<p>Lectura actual</p>
-					  		</div>
-					  		<div class="col-2">
-					  			<p>...</p>
-					  		</div>
 		  				</div>
 		  			</div>
 		  		</div>		
 		  	</div>
 		  	<br>
-		  	<div class="row">
-		  		<div class="col-2 art">
-		  			<p align="center">...</p>
-		  		</div>
-		  		<div class="col-2">
-		  			<p>Nombre</p>
-		  			<p>Autor</p>
-		  			<p>Idioma</p>
-		  			<p>Genero</p>
-		  			<p>ISBN</p>
-		  			<p>Fecha de publicacion</p>
-		  		</div>
-		  		<div class="col-3">
-		  			<p>...</p>
-		  			<p>...</p>
-		  			<p>...</p>
-		  			<p>...</p>
-		  			<p>...</p>
-		  			<p>...</p>
-		  		</div>
-		  		<div class="col-3 art">
-		  			<p>Lecturas anteriores</p>
-		  		</div>
-		  	</div>
-		  	<br>
-		  	<div class="row">
-		  		<div class="col-10" align="right">
-		  			<input type="submit" style="background-color: #FF7777;" onclick="eliminar()" id="eliminar" class="button" value="Eliminar">
-		  		</div>
-		  	</div>
-  		</form>
+			  <div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-body">
+							<h2 class="card-title text-uppercase mb-0">Manejo de Clubs</h2>
+						</div>
+						<br>
+						<div class="table-responsive">
+							<table id="tabla_Clubes">
+								<thead>
+									<tr>
+										<th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
+										<th scope="col">Nombre</th>
+										<th scope="col">Fecha de Creacion</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
   	</div>
-</body>
-<script type="text/javascript">
-	function eliminar(){
-		confirm('Desea eliminar el club de lectura?');
-	}
-</script>
+					<!-- MODAL DE MODIFCACIONES -->
+					<div id="modifModal" class="modal" tabindex="-1">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								 <div class="modal-header">
+									 <h5 class="modal-title">Modificar Club</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="cerrarModal()">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<input type="hidden" id="txtID">
+									<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1">Nombre</span>
+											</div>
+											<input type="text" id="txtNombre" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+									</div>									
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cerrarModal()">Cerrar</button>
+									<div id="btnGuardarCont"></div>
+									<button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+		</body>			
+	<script type="text/javascript" src="js/manejoClub.js"></script>
 </html>

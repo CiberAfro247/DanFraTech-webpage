@@ -139,8 +139,7 @@
       background-color: #A7C7C4;
       font-family: 'Helvetica', sans-serif;
       font-size: 16px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
+   
     }
 
     .flexsearch--submit {
@@ -220,18 +219,13 @@
 
 </head>
 <body class="text-center">
- <?php require 'header.php' ?>
- 
-  <?php if(!empty($message)): ?>
-    <p> <?= $message ?></p>
-  <?php endif; ?>
 
   <div class="container centrado">
     <div class="row"> 
       <div class="col-md-12 art">
 
         <main class="form-signin w-100 m-auto">
-          <form action="signup.php" method="POST">
+          <form action="php/signup.php" method="POST">
             <h1 class="h3 mb-3 fw-normal">Crear usuario</h1>
 
 
@@ -299,9 +293,9 @@
               <button class="button" type="submit" value="submit">Crear</button>
               <br>
               <br>
-              <h1 class="h5 mb-1 fw-normal">Si ya tiene una cuenta creada presione <a href="login.php">aqui</a></h1>
             </div>
           </form>
+          <h1 class="h5 mb-1 fw-normal">Si ya tiene una cuenta creada presione <a href="login.html">aqui</a></h1>
         </main>
       </div>
     </div>
