@@ -69,7 +69,7 @@ Modificacion del Club
 function guardarCambios(pos){
 	console.log(pos);
 	$.ajax({
-			url: 'php/modificar_Club.php',
+			url: '../php/modificar_Club.php',
 			method : 'POST',
 			data : {
 				nombre : $('#txtNombre').val(),
