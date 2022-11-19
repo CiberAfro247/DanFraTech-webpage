@@ -92,21 +92,24 @@
         </div>
 		<BR>
 			<div class="row">
-					<div class="col-5 art">
-					<h3>Multimedia</h3>
-					 <p><input type="text" id="titulo" placeholder="Insertar Nombre"></p>
-			 		 <p><input type="text" id="isbn" placeholder="Insertar Autor"></p>
-			 		 <P>Insertar Imagen<input type="file" id="imagen"></P>
-					 <p>Rating <select name="select">
-						<option value="value1" selected> 1</option>
-						<option value="value2"> 2</option>
-						<option value="value3"> 3</option>
-						<option value="value4"> 4</option>
-						<option value="value5"> 5</option>
-			 		 </select></p>
-			  		 <p> Reseña</p><textarea id="resenia" rows="10" cols="50">Ingrese la Reseña</textarea>
-					</div>
-			</div>
+				<div class="col-5 art">
+					<form action="../php/ingresar_resenias.php" method="post">
+				<h3>Multimedia</h3>
+				 <p><input type="text" id="idrese" name="idresenia" placeholder="Insertar ID"></p>
+				  <p><input type="date" id="fecha" name="fecha_Rese"></p>
+				 <p>Rating <select name="select" id="cmbRating">
+					<option value="value1" selected> 1</option>
+					<option value="value2"> 2</option>
+					<option value="value3"> 3</option>
+					<option value="value4"> 4</option>
+					<option value="value5"> 5</option>
+				  </select></p>
+				   <p> Reseña</p><textarea name= "rese"id="resenia" rows="10" cols="50">Ingrese la Reseña</textarea>
+				 <p><input type="submit" id="crear" class="button" value="Crear"></p>
+					</form>
+				</div>
+		</div>
+
 	  </div>
 </body>
 </html>
