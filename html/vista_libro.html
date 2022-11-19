@@ -56,7 +56,7 @@
                                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                         <li><a class="dropdown-item" href="">Perfil</a></li>
                                         <div class="dropdown-divider"></div>
-                                        <li><a class="dropdown-item" href="Inicio_sin_usuario.html">Cerrar sesión</a></li>
+                                        <li><a class="dropdown-item" href="../Index.html">Cerrar sesión</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -92,7 +92,7 @@
                 </div>
               </div>
               <div class="col-md-3">             
-                <input type="submit"  onclick="Prestamo()" id="prestamo" class="button button_books" value="Pedir Prestamo">
+                <a type="button" id="prestamo" class="button button_books" href="libro.html" value="Pedir Prestamo">Pedir Prestamo</a>
               </div>
         </div>
         <hr style="color: #31ada1; border:1px;">
@@ -126,9 +126,4 @@
             </div>
 </div>
 </body>
-<script type="text/javascript">
-    function Prestamo(){
-        confirm('Desea pedir el prestamo de este libro?');
-    }
-</script>
 </html>
