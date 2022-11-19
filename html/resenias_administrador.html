@@ -33,8 +33,7 @@
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 										<li><a class="dropdown-item" href="libros_administrador.html">Pagina Principal</a></li>	
 									  	<li><a class="dropdown-item" href="libros_ingresar.html">Ingresar</a></li>
-										<li><a class="dropdown-item" href="libros_eliminar.html">Eliminar</a></li>
-									  	<li><a class="dropdown-item" href="libros_modificar.html">Modificar</a></li>
+									  	<li><a class="dropdown-item" href="libros_modificar.html">Manejo de Libros</a></li>
 									</ul>
 								</li>
 								<li class="nav-item dropdown">
@@ -44,8 +43,7 @@
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 										<li><a class="dropdown-item" href="clubs_de_lectura_administrador.html">Pagina Principal</a></li>
 										<li><a class="dropdown-item" href="crear_club_de_lectura.html">Crear</a></li>
-									  	<li><a class="dropdown-item" href="eliminar_club_de_lectura.html">Eliminar</a></li>
-									  	<li><a class="dropdown-item" href="modificar_club_de_lectura.html">Modificar</a></li>
+									  	<li><a class="dropdown-item" href="eliminar_club_de_lectura.html">Manejo de Clubs</a></li>
 									</ul>
 								</li>
 								<li class="nav-item dropdown">
@@ -64,8 +62,7 @@
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                        						<li><a class="dropdown-item" href="ingresar_autores.html">Ingresar</a></li>
-									  	<li><a class="dropdown-item " href="eliminar_autores.html">Eliminar</a></li>
-									  	<li><a class="dropdown-item " href="modificar_autores.html">Modificar</a></li>
+									  	<li><a class="dropdown-item " href="eliminar_autores.html">Manejo de Autores</a></li>
 									</ul>
 								</li>	
 							
@@ -80,12 +77,12 @@
 								</li>
 						
 								<li class="nav-item">
-			            			<a class="nav-link a-custom" href="../html/resenias_administrador.html">Reseñar</a>
+			            			<a class="nav-link a-custom" href="html/resenias_administrador.html">Reseñar</a>
 			          			</li>
 								<li>
 			          				<div class="flexsearchNav" align="center">
 										<div class="flexsearch--wrapper">
-											<form class="flexsearch--form" action="busqueda_libro_administrador.php" method="post">
+											<form class="flexsearch--form" action="../php/busqueda_libro_administrador.php" method="post">
 												<div class="flexsearch--input-wrapper">
 													<input id="buscar" name="buscar" class="flexsearch--input" type="search" placeholder="Buscar libros">
 													<input type="submit" name="submit" class="button">
@@ -105,7 +102,7 @@
 									<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 										<li><a class="dropdown-item" href="">Perfil</a></li>
 										<div class="dropdown-divider"></div>
-								  		<li><a class="dropdown-item" href="Inicio_sin_usuario.html">Cerrar sesión</a></li>
+								  		<li><a class="dropdown-item" href="index.html">Cerrar sesión</a></li>
 									</ul>
 								</li>
 			        		</ul>
@@ -127,7 +124,7 @@
                     <div class="col-6">
                         <div class="flexsearchClubs">
                           <div class="flexsearch--wrapper">
-                              <form class="flexsearch--form" action="#" method="post">
+                              <form class="flexsearch--form" action="../php/busqueda_libro_administrador.php" method="post">
                                   <div class="flexsearch--input-wrapper">
                                       <input class="flexsearch--input" type="search" placeholder="Buscar Libros">
                                   </div>
@@ -141,9 +138,10 @@
 		<BR>
 			<div class="row">
 					<div class="col-5 art">
+						<form action="../php/ingresar_resenia.php" method="post">
 					<h3>Multimedia</h3>
 					 <p><input type="text" id="titulo" placeholder="Insertar Nombre"></p>
-			 		 <p><input type="text" id="isbn" placeholder="Insertar Autor"></p>
+			 		 <p><input type="text" id="isbn" placeholder="Insertar Libro"></p>
 			 		 <P>Insertar Imagen<input type="file" id="imagen"></P>
 					 <p>Rating <select name="select">
 						<option value="value1" selected> 1</option>
@@ -153,6 +151,7 @@
 						<option value="value5"> 5</option>
 			 		 </select></p>
 			  		 <p> Reseña</p><textarea id="resenia" rows="10" cols="50">Ingrese la Reseña</textarea>
+						</form>
 					</div>
 			</div>
 	  </div>
