@@ -19,7 +19,7 @@ traerClubs().then(dato => {
 
 function filaNueva(infoClub, pos){
 	var fila = "<div class='productClub' id='product_" + pos + "'>" + 
-					"<a href='club_de_lectura_administrador.php?id_club=" + infoClub.ID_Club + "' class='a'><h5 align='left'>" + infoClub.Nombre + "</h5></a>" +
+					"<a href='../php/club_de_lectura_administrador.php?id_club=" + infoClub.ID_Club + "' class='a'><h5 align='left'>" + infoClub.Nombre + "</h5></a>" +
 					"<p class='p' align='left'>Descripcion:</p>" +
 					"<p align='left'>" + infoClub.Descripcion + "</p>" +
 				"</div>"
@@ -29,7 +29,7 @@ function filaNueva(infoClub, pos){
 function otros(infoClub, pos){
 	var filaN = "<div class='row'>" +
 					"<div class='col-12 art'>" + 
-						"<a href='club_de_lectura_administrador.php?id_club=" + infoClub.ID_Club + "' class='a'><h5 align='left'>" + infoClub.Nombre + "</h5></a>" + 
+						"<a href='../php/club_de_lectura_administrador.php?id_club=" + infoClub.ID_Club + "' class='a'><h5 align='left'>" + infoClub.Nombre + "</h5></a>" + 
 						"<button class='button'>Unirse</button>" + 
 						"<p>" + infoClub.Descripcion + "</p>" +
 					"</div>" + 
