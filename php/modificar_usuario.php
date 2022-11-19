@@ -1,21 +1,31 @@
 <?php
-include 'database.php';
-try {
-    $conn = mysqli_connect($servidor,$usuario,$password,$base_datos);
-} catch (Exception $ex) {
-    die($ex->getMessage());
-}
+    include 'database.php';
+    
+    $admin;
 
-$id = $_POST['id'];
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$correo = $_POST['email'];
-$telefono = $_POST['telefono'];
-$nacimiento = $_POST['fecha'];
+    if (isset($_POST['si'])) {
+        $admin = 1;
+    }elseif (isset($_POST['no'])) {
+        $admin = 0;
+    }
 
-$consulta = "UPDATE usuariosPlataforma SET nombre = '$nombre', apellido = '$apellido', email = '$correo', telefono = '$telefono',  WHERE id =$id";
-$resultado = mysqli_query($conn , $consulta);
+    echo "hola";
 
-echo $consulta;
-
+    if (!empty($_POST['mail'])) {
+        echo "hola";
+        $query_eliminar = "UPDATE usuarios SET nombre = :nombre, apellido = :apellido, Telefono = :telefono, Mail = :email, Nacimiento = :fecha, Administrador = :admin WHERE Mail = :mail";
+        $records = $conn->prepare($query_eliminar);
+        $records->bindParam(':email', $_POST['email']);
+        $records->bindParam(':mail', $_POST['mail']);
+        $records->bindParam(':nombre', $_POST['nombre']);
+        $records->bindParam(':apellido', $_POST['apellido']);
+        $records->bindParam(':telefono', $_POST['telefono']);
+        $records->bindParam(':fecha', $_POST['fecha']);
+        $records->bindParam(':admin', $admin);
+        
+        if ($records->execute()) {
+            echo "hola";
+            header('Location: ../html/modificar_usuario.html');
+        }
+    }
 ?>
